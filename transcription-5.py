@@ -11,7 +11,7 @@ from docling.datamodel.pipeline_options import (
 )
 from docling.document_converter import DocumentConverter, PdfFormatOption
 
-path_to_root = "/home/users/s/selyanin/Finland"
+path_to_root = "your_file_path"
 INPUT = Path(path_to_root) / "out/qc_scan_pass"
 OUTPUT = Path(path_to_root) / "out/transc"
 OUTPUT.mkdir(parents=True, exist_ok=True)
@@ -31,7 +31,7 @@ def build_converter():
     pipeline_options.generate_picture_images = True
 
     pipeline_options.do_ocr = True
-    pipeline_options.ocr_options = EasyOcrOptions()
+    pipeline_options.ocr_options = EasyOcrOptions(lang=["fi", "sv", "en"])
 
     # Explicitly pin to GPU + the number of CPU threads allocated.
     pipeline_options.accelerator_options = AcceleratorOptions(
