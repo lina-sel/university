@@ -5,7 +5,7 @@ from typing import List
 
 import spacy
 
-path_to_root = "/home/users/s/selyanin/Finland"
+path_to_root = "your_root_path
 
 INPUT = Path(path_to_root) / "out/transl"
 OUTPUT = Path(path_to_root) / "out/anon"
